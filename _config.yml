@@ -1,8 +1,8 @@
 # Site settings
-title:       Learning for your brain LoL xD
+title:       tajquangkhanhs's blog
 email:       quangkhanh007@gmail.com
 author:      taj quangkhanhs
-description: "I write some memo for cryptography studies"
+description: "Learning for your brain LoL xD"
 baseurl:     ""
 url:         "http://tqk.pw"
 date_format: "%b %-d, %Y"
@@ -37,13 +37,13 @@ flattr_button:
 show_sharing_icons: true
 share_text: 'Share this post!'
 # Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
+share_facebook: true
+share_twitter: true
 share_googleplus: false
 share_linkedin: false
 share_digg: false
 share_tumblr: false
-share_reddit: false
+share_reddit: true
 share_stumbleupon: false
 share_hackernews: false
 
