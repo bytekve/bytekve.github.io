@@ -48,9 +48,8 @@ share_stumbleupon: false
 share_hackernews: false
 
 # Build settings
+highlighter: pygments
 markdown:     kramdown
-kramdown:
-  input: GFM
 permalink:    pretty
 paginate:     4
 sass:

