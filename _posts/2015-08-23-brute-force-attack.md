@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hiểu thêm về tấn công brute force
+title: More about brute  force attack
 date: 2015-08-23 11:28
 categories: CSATT attack
 ---
