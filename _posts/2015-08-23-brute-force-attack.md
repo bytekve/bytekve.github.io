@@ -7,7 +7,7 @@ categories: CSATT attack
 Hôm trước thầy Tuấn Anh đã nhắc đến phương pháp này, tuy nhiên tôi sẽ làm rõ thêm một số vấn đề, đây không phải là một bài giải cặn kẽ cho các bạn, nó mang tính định hướng nhiều hơn.
 
 # Code sample
-Giả sử tôi có trang đăng nhập là [http://tqk.itps.com.vn/demo.php](http://tqk.itps.com.vn/demo.php). tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
+Giả sử tôi có trang đăng nhập là [http://tqk.itps.com.vn/demo.php](http://tqk.itps.com.vn/demo.php). Tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
 
 PHP:
 {% highlight php linenos startinline=true %}
@@ -96,7 +96,7 @@ Và khi tôi chạy đoạn code này, với một máy tính "bình dân" của
 
 Tôi sẽ nói qua về việc brute hàm băm (sử dụng thuật toán "một chiều" tức là có mã hóa nhưng không có giải mã), đó là chúng ta sử dụng các bản rõ, nằm trong wordlist, rồi thực hiện mã hóa sau đó so sánh với bãn mã cần crack. Tất nhiên, các mật mã hàm băm vẫn có xác suất trùng lặp, có nghĩa là có thể có 2 bản rõ nhưng cùng một bản mã, tuy nhiên xác suất này rất nhỏ, đủ để người ta chấp nhận được.
 
-Có thể hiểu việc brute giống như các bạn đang thử làm một điều gì đó có phù hợp với tôi hay không, như thử giày, thử công việc, thử người yêu ;))) Đại khái là như thế đó.
+Có thể hiểu việc brute giống như các bạn đang thử làm một điều gì đó có phù hợp với tôi hay không, như thử giày, thử công việc, thử người yêu ;))) Đối với mọi đối tượng thì đều có một mục đích chung, chỉ khác mỗi cách thức bạn tiếp cận. Đại khái là như thế đó.
 
 # Protection
 
