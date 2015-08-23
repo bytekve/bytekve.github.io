@@ -36,7 +36,7 @@ foreach ($dic as $password) {
 
 Run test:
 
-````
+```
 Password: demo => Wrong password!
 Password: 123 => Wrong password!
 Password: 1234 => Wrong password!
@@ -45,7 +45,7 @@ Password: test => Wrong password!
 Password: demo1 => Wrong password!
 Password: demo123 => You got it.
 Password: 123demo => Wrong password!
-````
+```
 
 Python:
 
