@@ -6,7 +6,7 @@ categories: CSATT attack
 ---
 Hôm trước thầy Tuấn Anh đã nhắc đến phương pháp này, tuy nhiên tôi sẽ làm rõ thêm một số vấn đề, đây không phải là một bài giải cặn kẽ cho các bạn, nó mang tính định hướng nhiều hơn.
 
-# Code sample
+## Code sample
 Giả sử tôi có trang đăng nhập là [http://tqk.itps.com.vn/demo.php](http://tqk.itps.com.vn/demo.php). Tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
 
 PHP:
@@ -98,11 +98,11 @@ Tôi sẽ nói qua về việc brute hàm băm (sử dụng thuật toán "một
 
 Có thể hiểu việc brute giống như các bạn đang thử làm một điều gì đó có phù hợp với tôi hay không, như thử giày, thử công việc, thử người yêu ;))) Đối với mọi đối tượng thì đều có một mục đích chung, chỉ khác mỗi cách thức bạn tiếp cận. Đại khái là như thế đó.
 
-# Protection
+## Protection
 
 Vậy chắc chắn tấn công brute force sẽ phá vỡ tính chất của ATTT của một hệ thống thông tin nếu không có biện pháp khắc phục. Về cơ bản, các máy chủ có nhiều cách để bảo về khỏi các cuộc tấn công đơn giản này bằng cách cấu hình rule cho firewall, hoặc cũng có thể áp dụng ngay trên các ứng dụng đăng nhập, như captcha là một ví dụ điển hình, hay việc giới hạn số lần đăng nhập thất bại trong khoảng thời gian nào đó. Bạn đọc có thể tự tìm hiểu thêm.
 
-# More information
+## More information
 
 * Trong suốt bài viết tôi không hề muốn sử dụng đến từ "mật khẩu", vì đơn giản, chúng ta đang học một môn chuyên nghành, và tôi nghĩ "mật khẩu" không phải là từ có thể thay thế cho "password".
 
