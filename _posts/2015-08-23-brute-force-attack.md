@@ -36,7 +36,7 @@ foreach ($dic as $password) {
 
 Run test:
 
-{% raw %}
+~~~
 Password: demo => Wrong password!
 
 Password: 123 => Wrong password!
@@ -52,7 +52,7 @@ Password: demo1 => Wrong password!
 Password: demo123 => You got it.
 
 Password: 123demo => Wrong password!
-{% endraw %}
+~~~
 Python:
 
 {% highlight python linenos %}
@@ -67,13 +67,13 @@ for password in pwlist:
 {% endhighlight %}
 
 
-{% raw %}
+~~~
 Admin@LEOK-PC
 
 $ py demobrute.py
 
 Password found: demo123
-{% endraw %}
+~~~
 Trên đây tôi đã demo cho các bạn phương pháp brute bằng từ điển - dictionary hay wordlist ( từ điển ở đây chính là array/list tôi đưa vào, thông thường thì lấy từ điển từ file). tôi sẽ không đi sâu vào code ( nếu như một số bạn không hiểu), mà chủ yếu là để các bạn nhìn ra rằng phương pháp tấn công này được áp dụng như thế nào. Nói thêm rằng thông thường các worldlist sẽ được khởi tao thông qua các thuật toán, pattern để giảm bớt các mật khẩu "vô nghĩa", nhưng không phải luôn luôn như thế.
 
 Việc tấn công có hay không sử dụng từ điển đều được hoạt động trên cùng cơ chế, tức là bạn sẽ phải generate ra các password theo pattern ( bao nhiêu kí tự, thường hay hoa, hay giả sử đã biết kí tự gì đó...v.v..) rồi lần lượt thực hiện việc đăng nhập và dựa vào kết quả trả về để xác định mật khẩu đúng.
