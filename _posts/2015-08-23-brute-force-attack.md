@@ -9,8 +9,8 @@ Hôm trước thầy Tuấn Anh đã nhắc đến phương pháp này, tuy nhi�
 # Code sample
 Giả sử tôi có trang đăng nhập là http://tqk.itps.com.vn/demo.php. tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
 
-PHP
-````php
+PHP:
+{% highlight php startinline=true %}
 <?php
 $dic = ['demo', '123', '1234', '123456', 'test', 'demo1', 'demo123', '123demo'];
 foreach ($dic as $password) {
@@ -32,7 +32,8 @@ foreach ($dic as $password) {
   
   }
 ?>
-```
+{% endhighlight %}
+
 Run test:
 
 ````
