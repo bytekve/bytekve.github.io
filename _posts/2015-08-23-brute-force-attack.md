@@ -25,9 +25,9 @@ foreach ($dic as $password) {
     $result = curl_exec($ch);
     curl_close($ch);
     if (strpos($result, 'talent') == false){
-        echo "<pre> Password: " .$password. " => Wrong password!</pre>";
+        echo " Password: " .$password. " => Wrong password!";
     } else {
-        echo "<pre> Password: " .$password. " => You got it.</pre>";
+        echo "Password: " .$password. " => You got it.";
     }
 }
 ?>
