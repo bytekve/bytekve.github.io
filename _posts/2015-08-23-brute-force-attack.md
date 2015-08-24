@@ -96,16 +96,16 @@ Và khi tôi chạy đoạn code này, với một máy tính "bình dân" của
 
 Tôi sẽ nói qua về việc brute hàm băm (sử dụng thuật toán "một chiều" tức là có mã hóa nhưng không có giải mã), đó là chúng ta sử dụng các bản rõ, nằm trong wordlist, rồi thực hiện mã hóa sau đó so sánh với bãn mã cần crack. Tất nhiên, các mật mã hàm băm vẫn có xác suất trùng lặp, có nghĩa là có thể có 2 bản rõ nhưng cùng một bản mã, tuy nhiên xác suất này rất nhỏ, đủ để người ta chấp nhận được.
 
-Có thể hiểu việc brute giống như các bạn đang thử làm một điều gì đó có phù hợp với tôi hay không, như thử giày, thử công việc, thử người yêu ;))) Đối với mọi đối tượng thì đều có một mục đích chung, chỉ khác mỗi cách thức bạn tiếp cận. Đại khái là như thế đó.
+Có thể hiểu việc brute giống như các bạn đang thử làm một điều gì đó có phù hợp với mình hay không, như thử giày, thử công việc, thử người yêu ;))) Đối với mọi đối tượng thì đều có một mục đích chung, chỉ khác mỗi cách thức bạn tiếp cận. Đại khái là như thế đó.
 
 ## Protection
 
-Vậy chắc chắn tấn công brute force sẽ phá vỡ tính chất của ATTT của một hệ thống thông tin nếu không có biện pháp khắc phục. Về cơ bản, các máy chủ có nhiều cách để bảo về khỏi các cuộc tấn công đơn giản này bằng cách cấu hình rule cho firewall, hoặc cũng có thể áp dụng ngay trên các ứng dụng đăng nhập, như captcha là một ví dụ điển hình, hay việc giới hạn số lần đăng nhập thất bại trong khoảng thời gian nào đó. Bạn đọc có thể tự tìm hiểu thêm.
+Như vậy, tấn công brute force sẽ phá vỡ các tính chất ATTT của một hệ thống thông tin nếu không có biện pháp khắc phục. Về cơ bản, các máy chủ có nhiều cách để bảo về khỏi các cuộc tấn công đơn giản này bằng cách cấu hình rule cho firewall, hoặc cũng có thể áp dụng ngay trên các ứng dụng đăng nhập, như captcha là một ví dụ điển hình, hay việc giới hạn số lần đăng nhập thất bại trong khoảng thời gian nào đó. Bạn đọc có thể tự tìm hiểu thêm.
 
 ## More information
 
 * Trong suốt bài viết tôi không hề muốn sử dụng đến từ "mật khẩu", vì đơn giản, chúng ta đang học một môn chuyên nghành, và tôi nghĩ "mật khẩu" không phải là từ có thể thay thế cho "password".
 
-* Trên bài viết tôi có đề cập đến việc sử dụng code cho việc brute force, tuy nhiên, hiện tại có rất nhiều công cụ mạnh mẽ giúp chúng ta tạo wordlist, crack hash, crack network password có thể kể đến như [John The Ripper](http://www.openwall.com/john/), [Hashcat](http://hashcat.net/oclhashcat/), [Hydra](https://github.com/vanhauser-thc/thc-hydra), [burpsuite](https://portswigger.net/burp/), [cewl](https://digi.ninja/projects/cewl.php)
+* Trên bài viết tôi có đề cập đến việc sử dụng code cho việc brute force, tuy nhiên, hiện tại có rất nhiều công cụ mạnh mẽ giúp chúng ta brute mật khẩu website, tạo wordlist, crack hash, crack network password (brute force)có thể kể đến như [John The Ripper](http://www.openwall.com/john/), [Hashcat](http://hashcat.net/oclhashcat/), [Hydra](https://github.com/vanhauser-thc/thc-hydra), [burpsuite](https://portswigger.net/burp/), [cewl](https://digi.ninja/projects/cewl.php). Một số công cụ được cung cấp sẵn trong các penetration testing linux distro như Kali, backbox, pentoo, parrot...
 
 * Toàn bộ code các bạn có thể xem [tại đây](https://github.com/bytekve/bytekve.github.io/tree/master/codesample).
