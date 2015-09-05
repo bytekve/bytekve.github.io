@@ -6,7 +6,8 @@ categories: hash break
 ---
 ##Introduction
 Hãy làm một phép thử:
-````
+
+~~~
 Admin@LEOK-PC /e/md5coll
 $ wget https://s3-eu-west-1.amazonaws.com/md5collisions/a.php --no-check-certificate
 $ wget https://s3-eu-west-1.amazonaws.com/md5collisions/b.php --no-check-certificate
@@ -22,14 +23,17 @@ Algorithm       Hash
 ---------       ----
 MD5             62E1D0D1620581693435AA75F5B6C964
 
+~~~
 
-````
 ##Explaination
->>MD5 collision
+
+>MD5 collision
 
 Đó là tất cả những gì bạn có thể tìm kiếm trên google nếu muốn tìm hiểu thêm về những gì đã xảy ra trên đây. Trong giới hạn bài viết và vốn hiểu biết của tôi sẽ không thể trình bày hết về vấn đề này.
+
 ###Reference
 Một số tài liệu các bạn có thể tham khảo:
+
 *[How to Break MD5 and Other Hash Functions](http://www.infosec.sdu.edu.cn/uploadfile/papers/How%20to%20Break%20MD5%20and%20Other%20Hash%20Functions.pdf)
 
 *[Construct MD5 Collisions Using Just A Single Block Of Message ](http://eprint.iacr.org/2010/643.pdf)
