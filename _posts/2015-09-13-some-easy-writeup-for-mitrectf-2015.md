@@ -10,13 +10,17 @@ C qogvi. Sio qogvi. By- mby- gy... qogvi. Qogvi; Qogvicha; Qy'ff bupy nbyy qogvi
 ~~~
 
 ROT-6: I wumbo. You wumbo. He- she- me... wumbo. Wumbo; Wumboing; We'll have thee wumbo; Wumborama; Wumbology; the study of Wumbo. It's first grade, Spongebob! MCA-AC56D5EA
+
 ~~~
 Flag: MCA-AC56D5EA
 ~~~
 
 ## Crypto 100 - Message
+
 ###[Gravity Falls Cryptogram](http://gravityfalls.wikia.com/wiki/List_of_cryptograms#Author.27s_symbol_substitution_cipher)
-~[gravity falls](/images/gravitymessage.png)
+
+![gravity falls](/images/CTF/gravitymessage.png)
+
 ~~~
 MCA DASH FOUR TWO SIX NINE SIX C SIX C
 ~~~
@@ -24,7 +28,7 @@ MCA DASH FOUR TWO SIX NINE SIX C SIX C
 Flag: MCA-42696c6c
 
 ## Crypto 100 - Scamble
-![scamble](/images/scamble.png)
+![scamble](/images/CTF/scamble.png)
 
 ~~~python
 from PIL import Image
@@ -47,7 +51,7 @@ im2.show()
 im2.save('flag.png')
 ~~~
 
-![flag found](/images/c100mireflag.png)
+![flag found](/images/CTF/c100mireflag.png)
 
 ## Web 100 - Geocaching
 
@@ -91,11 +95,13 @@ print('Your flag is ' + translate(flag))
 ~~~
 
 ## Crypto 300 - Doctor Message
+
 ### [ Circular Gallifreyan ](http://www.shermansplanet.com/gallifreyan)
 
 | I'll update image later
 
 Message decoded:
+
 ~~~
 The flag sounds like emsee a bead cafe
 ~~~
