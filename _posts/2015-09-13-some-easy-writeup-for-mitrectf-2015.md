@@ -10,7 +10,10 @@ categories: ctf writeup
 C qogvi. Sio qogvi. By- mby- gy... qogvi. Qogvi; Qogvicha; Qy'ff bupy nbyy qogvi; Qogvilugu; Qogvifias; nby mnoxs iz Qogvi. Cn'm zclmn aluxy, Mjihayviv! GWU-UW56X5YU
 ~~~
 
-ROT-6: I wumbo. You wumbo. He- she- me... wumbo. Wumbo; Wumboing; We'll have thee wumbo; Wumborama; Wumbology; the study of Wumbo. It's first grade, Spongebob! MCA-AC56D5EA
+ROT-6:
+~~~
+I wumbo. You wumbo. He- she- me... wumbo. Wumbo; Wumboing; We'll have thee wumbo; Wumborama; Wumbology; the study of Wumbo. It's first grade, Spongebob! MCA-AC56D5EA
+~~~
 
 ~~~
 Flag: MCA-AC56D5EA
@@ -54,6 +57,7 @@ im2.save('flag.png')
 ~~~
 
 ![flag found](/images/CTF/c100mitreflag.png)
+
 Flag: MCA-9b1a4f1e44
 
 ## Web 100 - Geocaching
