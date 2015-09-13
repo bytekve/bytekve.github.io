@@ -5,6 +5,7 @@ date: 2015-09-13 11:48
 categories: ctf writeup
 ---
 ## Crypto 50
+|
 ~~~
 C qogvi. Sio qogvi. By- mby- gy... qogvi. Qogvi; Qogvicha; Qy'ff bupy nbyy qogvi; Qogvilugu; Qogvifias; nby mnoxs iz Qogvi. Cn'm zclmn aluxy, Mjihayviv! GWU-UW56X5YU
 ~~~
@@ -18,7 +19,7 @@ Flag: MCA-AC56D5EA
 ## Crypto 100 - Message
 
 ###[Gravity Falls Cryptogram](http://gravityfalls.wikia.com/wiki/List_of_cryptograms#Author.27s_symbol_substitution_cipher)
-
+|
 ![gravity falls](/images/CTF/gravitymessage.png)
 
 ~~~
@@ -28,6 +29,7 @@ MCA DASH FOUR TWO SIX NINE SIX C SIX C
 Flag: MCA-42696c6c
 
 ## Crypto 100 - Srcamble
+|
 ![scramble](/images/CTF/scramble.png)
 
 ~~~python
@@ -52,8 +54,10 @@ im2.save('flag.png')
 ~~~
 
 ![flag found](/images/CTF/c100mitreflag.png)
+Flag: MCA-9b1a4f1e44
 
 ## Web 100 - Geocaching
+|
 
 This problem must be on run on their vpn.
 
@@ -98,7 +102,8 @@ print('Your flag is ' + translate(flag))
 
 ### [ Circular Gallifreyan ](http://www.shermansplanet.com/gallifreyan)
 
-| I'll update image later
+|
+![doctor message](/images/CTF/messsage_from_the_doctor.png)
 
 Message decoded:
 
