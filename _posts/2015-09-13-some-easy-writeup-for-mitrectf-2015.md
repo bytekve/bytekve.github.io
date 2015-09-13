@@ -27,8 +27,8 @@ MCA DASH FOUR TWO SIX NINE SIX C SIX C
 
 Flag: MCA-42696c6c
 
-## Crypto 100 - Scamble
-![scamble](/images/CTF/scamble.png)
+## Crypto 100 - Srcamble
+![scramble](/images/CTF/scramble.png)
 
 ~~~python
 from PIL import Image
@@ -51,7 +51,7 @@ im2.show()
 im2.save('flag.png')
 ~~~
 
-![flag found](/images/CTF/c100mireflag.png)
+![flag found](/images/CTF/c100mitreflag.png)
 
 ## Web 100 - Geocaching
 
