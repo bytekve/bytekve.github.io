@@ -11,6 +11,7 @@ C qogvi. Sio qogvi. By- mby- gy... qogvi. Qogvi; Qogvicha; Qy'ff bupy nbyy qogvi
 ~~~
 
 ROT-6:
+
 ~~~
 I wumbo. You wumbo. He- she- me... wumbo. Wumbo; Wumboing; We'll have thee wumbo; Wumborama; Wumbology; the study of Wumbo. It's first grade, Spongebob! MCA-AC56D5EA
 ~~~
