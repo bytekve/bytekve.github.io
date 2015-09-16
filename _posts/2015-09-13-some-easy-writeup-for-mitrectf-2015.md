@@ -96,9 +96,7 @@ base_url = 'http://10.0.1.21/3d6b87076c1c-geocaching/'
 locations = ((25,-74), (39.1164, 125.8058), (42.504901,-71.236543), (55.7500, 37.6167), (-33.8587,151.2140), (45.5045,-73.5563), (-80,10), (36.112890,-115.171282))
 flag = ''
 for location in locations:
-    flag
-
-     += keep_going(location)
+    flag+= keep_going(location)
 print('Your flag is ' + translate(flag))
 ~~~
 
