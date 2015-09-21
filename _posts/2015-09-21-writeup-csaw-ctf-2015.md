@@ -6,6 +6,7 @@ categories: ctf Writeup
 ---
 CTF này mình chỉ có hơn 1 ngày để chơi, vì sau đó phải làm báo cáo môn CSLTMM  :'(
 Mấy bài trivia thì các bạn chịu khó google 1 tí sẽ ra  lol
+
 #Trivia 1 - 10 points
 
 ~~~~
@@ -48,6 +49,7 @@ Flag: DLL Injection
 
 3 bài crypto-50 này có chung một dạng.
 Note for newbie: Các bạn mới chơi ctf, đừng bao giờ nhìn vào đuôi file,  mà hãy sử dụng lệnh "file" trên Kali/Linux để kiểm tra, dưới đây là ví dụ:
+
 #ones_and_zer0es - Crypto 50 points
 
 [eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg](http://tqk.itps.com.vn/csaw/eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg)
@@ -57,7 +59,7 @@ tqk@kali:~/ctf/csaw$ file eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec92817
 eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg: ASCII text, with very long lines
 ~~~~
 
-Ext là .mpeg nhưng chắc mình nghĩ trên đời này ko có player nào có thể phát đoạn video này đâu :)))
+Ext là .mpeg nhưng chắc mình nghĩ trên đời này ko có player nào có thể phát đoạn video này đâu 19
 
 ~~~~
 tqk@kali:~/ctf/csaw$ cat eps1.1_ones-and-zer0es_c4368e65e1883044f3917485ec928173.mpeg
@@ -71,11 +73,12 @@ flat{People always make the best exploits.} I've never found it hard to hack mos
 ~~~~
 
 Submit flat{People always make the best exploits.} : Incorrect!
+
 Flag: flag{People always make the best exploits.}
 
 #whiter0se - Crypto-50
 
-Note: The flag is the entire thing decrypted
+>Note: The flag is the entire thing decrypted
 [eps1.7_wh1ter0se_2b007cf0ba9881d954e85eb475d0d5e4.m4v](http://tqk.itps.com.vn/csaw/eps1.7_wh1ter0se_2b007cf0ba9881d954e85eb475d0d5e4.m4v)
 
 ~~~~
@@ -86,6 +89,7 @@ EOY XF, AY VMU M UKFNY TOY YF UFWHYKAXZ EAZZHN. UFWHYKAXZ ZNMXPHN. UFWHYKAXZ EHM
 Lúc đầu mình nghĩ là ROT, nhưng không ra kết quả nên nghĩ ngay đến phân tích [tần số](https://en.wikipedia.org/wiki/Frequency_analysis)
 
 Flag:
+
 ~~~~
 BUT NO, IT WAS A SHORT CUT TO SOMETHING BIGGER. SOMETHING GRANDER. SOMETHING BEAUTIFUL. WE'VE BEEN FOCUSED ON WHAT'S IN FRONT OF US. BUT WE HAVEN'T BEEN LOOKING AT WHAT'S ABOVE US.
 ~~~~
@@ -94,12 +98,15 @@ BUT NO, IT WAS A SHORT CUT TO SOMETHING BIGGER. SOMETHING GRANDER. SOMETHING BEA
 [eps1.9_zer0-day_b7604a922c8feef666a957933751a074.avi](http://tqk.itps.com.vn/csaw/eps1.9_zer0-day_b7604a922c8feef666a957933751a074.avi)
 
 #notesy - Crypto-100
-http://54.152.6.70/
-Hint: The flag is not in the flag{} format.
+>http://54.152.6.70/
+
+>Hint: The flag is not in the flag{} format.
 
 Đúng là easy, dễ đến nỗi mà mình không thể ngờ được. Nói chung là mình không hiểu mục đích của bài này :D
+
 Đầu tiên mình còn tưởng đây là một bài web-crypto nữa chứ,  đang tìm kiếm thông tin thì lên irc chat có thằng moderator nó bảo câu: seem you see the flag but i've not submit
 Yeah
+
 Flag là chính là encrypt(abcdefghijklmnopqrstuvwxyz)
 
 Flag: UNHMAQWZIDYPRCJKBGVSLOETXF
@@ -109,7 +116,7 @@ Flag: UNHMAQWZIDYPRCJKBGVSLOETXF
 >
 >Note: this flag doesn't follow the "flag{}" format
 
-![img.jpg](/images/CTF/csaw.img.jpg)
+![img](/images/CTF/csaw.img.jpg)
 
 Việc đầu tiên của mình bất cứ khi tải một file về máy tính là check file lol. So it became easy
 
@@ -135,7 +142,9 @@ FLAG = 'flag{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}'
 
 Yeah
 Có vẻ như flag đã được gửi đi ở một tập tin nào đó :D
+
 Mở wrireshark lên, Ctrl + F , tick vào Find by String và Search on Package bytes. Gõ string vào ( 'flag' thôi cũng được ))
+
 Kết quả tìm thấy ở package #60. Right click => Follow TCP Stream. Ta có nội dung một file python mã hóa flag và một flag đã được mã hóa:
 
 Message:
@@ -226,8 +235,9 @@ Flag is: flag{li0ns_and_tig3rs_4nd_b34rs_0h_mi}
 
 #Flash - Crypto-100
 
-~~~~
 [flash_c8429a430278283c0e571baebca3d139.img](http://tqk.itps.com.vn/csaw/flash_c8429a430278283c0e571baebca3d139.img)
+
+~~~~
 $mkdir /mnt/flash
 $mount flash_c8429a430278283c0e571baebca3d139.img /mnt/flash
 $ls /mnt/flash
@@ -268,7 +278,9 @@ ___HINT___  index.html  jobs.html  js  premium.php  sign_up.php  validate_pass.p
 ~~~~
 
 Xem qua source một lượt thì thấy không thể sqli được. Mình tiếp tục mày mò với git, check log liếc các kiểu.
+
 Sometime later....
+
 Xem lại source một lần nữa.
 
 ~~~php
@@ -285,7 +297,9 @@ $query = "SELECT username FROM users WHERE username LIKE '$user';";
 ~~~
 
 Yep, ý tưởng của mình bắt đầu nảy ra từ đây, sẽ input vào các character để tìm user, thử ngay phát đầu tiên là thấy luôn LOL
+
 URL: http://54.165.252.74:8089/sign_up.php
+
 POST data: username=%a%&password=a
 
 ~~~~
@@ -311,9 +325,13 @@ if (strlen($pass) != strlen($hash))
 ~~~
 
 Như vậy, mật khẩu sẽ được hash md5 (xem đoạn js trong index) rồi sau đó gửi lên. Trước hết hết so sánh độ dài của password với độ dài của password user ~~FLAG~~~. Sau đó loop lần lượt các ký tự, nếu đúng sẽ sleep 0.3s trước khi chạy vòng lặp tiếp theo.
+
 Trong CTF, mặc định xem những dòng comment kiểu này là mình nghĩ ngay đến phải làm ngược lại với nó :D 
+
 ># Protect against brute force attacks
+
 Lần đầu tiên mình đã nghĩ đến việc brute, nhưng mình nghĩ 0.3s là khá nhỏ vì request còn phụ thuộc vào đường truyền, rồi tình trạng server nữa. Nhưng mình đã nhầm :'( con  số này đã đủ lớn rồi :D 
+
 Kỹ thuật này còn được gọi là timing attack.
 
 Code:
@@ -347,10 +365,11 @@ for i in range(32):
 print(password)
 ~~~
 
-OOPs. Bắt đầu từ ký tự thứ 11 thì tất cả thời gian đều tương tự nhau. Thoạt nghĩ mình sai ở đâu đó. Sau một hồi suy nghĩ và tin vào trình độ bậc n của mình thì mình quyết định gửi mật khẩu gôm 10 ký tự tim được là 667e217666 và sau đó là các ký tự bất kỳ.
+Oops. Bắt đầu từ ký tự thứ 11 thì tất cả thời gian đều tương tự nhau. Thoạt nghĩ mình sai ở đâu đó. Sau một hồi suy nghĩ và tin vào trình độ bậc n của mình thì mình quyết định gửi mật khẩu gôm 10 ký tự tim được là 667e217666 và sau đó là các ký tự bất kỳ.
 Và kết quả y như mình mong đợi:
 
 flag{gr0wth__h4ck!nG!1!1!
 
 Còn 2 bài Recon nữa, sẽ update sau. 100 năm rồi mới có người rủ đi nhậu...
+
 Good luck!
