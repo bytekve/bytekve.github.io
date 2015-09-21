@@ -47,7 +47,7 @@ On Windows, loading a library and having it's code run in another process is cal
 
 Flag: DLL Injection
 
-3 bài crypto-50 này có chung một dạng.
+3 bài crypto 50 này có chung một dạng.
 Note for newbie: Các bạn mới chơi ctf, đừng bao giờ nhìn vào đuôi file,  mà hãy sử dụng lệnh "file" trên Kali/Linux để kiểm tra, dưới đây là ví dụ:
 
 #ones_and_zer0es - Crypto 50 points
@@ -76,7 +76,7 @@ Submit flat{People always make the best exploits.} : Incorrect!
 
 Flag: flag{People always make the best exploits.}
 
-#whiter0se - Crypto-50
+#whiter0se - Crypto 50
 
 >Note: The flag is the entire thing decrypted
 [eps1.7_wh1ter0se_2b007cf0ba9881d954e85eb475d0d5e4.m4v](http://tqk.itps.com.vn/csaw/eps1.7_wh1ter0se_2b007cf0ba9881d954e85eb475d0d5e4.m4v)
@@ -94,12 +94,22 @@ Flag:
 BUT NO, IT WAS A SHORT CUT TO SOMETHING BIGGER. SOMETHING GRANDER. SOMETHING BEAUTIFUL. WE'VE BEEN FOCUSED ON WHAT'S IN FRONT OF US. BUT WE HAVEN'T BEEN LOOKING AT WHAT'S ABOVE US.
 ~~~~
 
-#zer0-day - Crypto-50
+#zer0-day - Crypto 50
 [eps1.9_zer0-day_b7604a922c8feef666a957933751a074.avi](http://tqk.itps.com.vn/csaw/eps1.9_zer0-day_b7604a922c8feef666a957933751a074.avi)
 
-#notesy - Crypto-100
->http://54.152.6.70/
+So simple.
 
+base64.b64decode(string.strip('\n'))
+
+~~~~
+Evil Corp, we have delivered on our promise as expected. The people of the world who have been enslaved by you have been freed. Your financial data has been destroyed. Any attempts to salvage it will be utterly futile. Face it: you have been owned. We at fsociety will smile as we watch you and your dark souls die. That means any money you owe these pigs has been forgiven by us, your friends at fsociety. The market's opening bell this morning will be the final death knell of Evil Corp. We hope as a new society rises from the ashes that you will forge a better world. A world that values the free people, a world where greed is not encouraged, a world that belongs to us again, a world changed forever. And while you do that, remember to repeat these words: "flag{We are fsociety, we are finally free, we are finally awake!}"
+~~~~
+
+Flag: flag{We are fsociety, we are finally free, we are finally awake!}
+
+#notesy - Crypto 100
+>http://54.152.6.70/
+>
 >Hint: The flag is not in the flag{} format.
 
 Đúng là easy, dễ đến nỗi mà mình không thể ngờ được. Nói chung là mình không hiểu mục đích của bài này :D
@@ -111,7 +121,7 @@ Flag là chính là encrypt(abcdefghijklmnopqrstuvwxyz)
 
 Flag: UNHMAQWZIDYPRCJKBGVSLOETXF
 
-#Keep Calm and CTF - Forensic-100
+#Keep Calm and CTF - Forensic 100
 >My friend sends me pictures before every ctf. He told me this one was special.
 >
 >Note: this flag doesn't follow the "flag{}" format
@@ -328,7 +338,7 @@ Như vậy, mật khẩu sẽ được hash md5 (xem đoạn js trong index) r�
 
 Trong CTF, mặc định xem những dòng comment kiểu này là mình nghĩ ngay đến phải làm ngược lại với nó :D 
 
-># Protect against brute force attacks
+> Protect against brute force attacks
 
 Lần đầu tiên mình đã nghĩ đến việc brute, nhưng mình nghĩ 0.3s là khá nhỏ vì request còn phụ thuộc vào đường truyền, rồi tình trạng server nữa. Nhưng mình đã nhầm :'( con  số này đã đủ lớn rồi :D 
 
@@ -340,7 +350,7 @@ Code:
 import requests
 import time
 charset = '0123456789abcdef'
-password = '667e217666xxxxxxxxxxxxxxxxxxxxxx'
+password = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 for i in range(32):
     mapping = {}
     for char in charset:
