@@ -5,7 +5,7 @@ date: 2015-09-21 14:39
 categories: ctf Writeup
 ---
 CTF này mình chỉ có hơn 1 ngày để chơi, vì sau đó phải làm báo cáo môn CSLTMM  :'(
-Mấy bài trivia thì các bạn chịu khó google 1 tí sẽ ra  lol
+Mấy bài trivia thì các bạn chịu khó google 1 tí sẽ ra.
 
 #Trivia 1 - 10 points
 
@@ -128,7 +128,7 @@ Flag: UNHMAQWZIDYPRCJKBGVSLOETXF
 
 ![img](/images/CTF/csaw.img.jpg)
 
-Việc đầu tiên của mình bất cứ khi tải một file về máy tính là check file lol. So it became easy
+Việc đầu tiên của mình bất cứ khi tải một file về máy tính là check file. Sure, so it became easy :)
 
 ~~~~
 tqk@kali:~/ctf/csaw$ file img.jpg
@@ -253,7 +253,7 @@ $mount flash_c8429a430278283c0e571baebca3d139.img /mnt/flash
 $ls /mnt/flash
 ~~~~
 
-Chúng ta có rất nhiều file txt ở đây. Mở một vài file ra, không có ý tưởng gì. 
+Chúng ta có rất nhiều file txt ở đây. Mở một vài file ra, không có ý tưởng gì.
 Liệu còn gì nữa không?
 
 ~~~~
@@ -263,7 +263,7 @@ $cd ls -al /mnt/flash
 Huh, thấy thêm một số folder bị ẩn. Sau một lúc tham quan các thư mục này thì chúng ta có flag:
 
 ~~~~
-$cat /mnt/flash/.10/.hidden 
+$cat /mnt/flash/.10/.hidden
 flag{b3l0w_th3_r4dar}
 
 ~~~~
@@ -306,7 +306,7 @@ $query = "SELECT username FROM users WHERE username LIKE '$user';";
     }
 ~~~
 
-Yep, ý tưởng của mình bắt đầu nảy ra từ đây, sẽ input vào các character để tìm user, thử ngay phát đầu tiên là thấy luôn LOL
+Yep, ý tưởng của mình bắt đầu nảy ra từ đây, sẽ input vào các character để tìm username.
 
 URL: http://54.165.252.74:8089/sign_up.php
 
@@ -336,11 +336,11 @@ if (strlen($pass) != strlen($hash))
 
 Như vậy, mật khẩu sẽ được hash md5 (xem đoạn js trong index) rồi sau đó gửi lên. Trước hết hết so sánh độ dài của password với độ dài của password user ~~FLAG~~~. Sau đó loop lần lượt các ký tự, nếu đúng sẽ sleep 0.3s trước khi chạy vòng lặp tiếp theo.
 
-Trong CTF, mặc định xem những dòng comment kiểu này là mình nghĩ ngay đến phải làm ngược lại với nó :D 
+Trong CTF, mặc định xem những dòng comment kiểu này là mình nghĩ ngay đến phải làm ngược lại với nó :D
 
 > Protect against brute force attacks
 
-Lần đầu tiên mình đã nghĩ đến việc brute, nhưng mình nghĩ 0.3s là khá nhỏ vì request còn phụ thuộc vào đường truyền, rồi tình trạng server nữa. Nhưng mình đã nhầm :'( con  số này đã đủ lớn rồi :D 
+Lần đầu tiên mình đã nghĩ đến việc brute, nhưng mình nghĩ 0.3s là khá nhỏ vì request còn phụ thuộc vào đường truyền, rồi tình trạng server nữa. Nhưng mình đã nhầm :'( con  số này đã đủ lớn rồi :D
 
 Kỹ thuật này còn được gọi là timing attack.
 
