@@ -86,12 +86,7 @@ tqk@kali:~/ctf/csaw$ cat eps1.7_wh1ter0se_2b007cf0ba9881d954e85eb475d0d5e4.m4v
 EOY XF, AY VMU M UKFNY TOY YF UFWHYKAXZ EAZZHN. UFWHYKAXZ ZNMXPHN. UFWHYKAXZ EHMOYACOI. VH'JH EHHX CFTOUHP FX VKMY'U AX CNFXY FC OU. EOY VH KMJHX'Y EHHX IFFQAXZ MY VKMY'U MEFJH OU.
 ~~~~
 
-Lúc đầu mình nghĩ là ROT, phân tích tần số. Sau cùng thì solve bằng đoạn code đơn giản:
-
-~~~python
-s = "EOY XF, AY VMU M UKFNY TOY YF UFWHYKAXZ EAZZHN. UFWHYKAXZ ZNMXPHN. UFWHYKAXZ EHMOYACOI. VH'JH EHHX CFTOUHP FX VKMY'U AX CNFXY FC OU. EOY VH KMJHX'Y EHHX IFFQAXZ MY VKMY'U MEFJH OU."
-print([''.join([chr(ord(x) + n) for x in s]) for n in range(-20, 20)])
-~~~
+Solved!
 
 Flag:
 
